@@ -17,4 +17,6 @@ class Owner extends Model
         'city',
         'phone'
     ];
+
+    public function getFullNameAttribute() { return "{$this->first_name} {$this->second_name} {$this->last_names}"; }
 }
