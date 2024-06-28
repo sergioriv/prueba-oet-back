@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Interfaces\DriverRepositoryInterface;
+use App\Repositories\DriverRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -11,7 +13,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(DriverRepositoryInterface::class, DriverRepository::class);
     }
 
     /**
