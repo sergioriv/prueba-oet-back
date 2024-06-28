@@ -10,3 +10,5 @@ Route::apiResource('/drivers', DriverController::class)->except('destroy');
 Route::apiResource('/owners', OwnerController::class)->except('destroy');
 
 Route::apiResource('/vehicles', VehicleController::class)->except('destroy');
+
+Route::get('/report/vehicles', [VehicleController::class, 'report']);

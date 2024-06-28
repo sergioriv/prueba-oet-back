@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateVehicleRequest;
 use App\Http\Resources\VehicleResource;
 use App\Interfaces\VehicleRepositoryInterface;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class VehicleController extends Controller
 {
@@ -72,5 +73,10 @@ class VehicleController extends Controller
             DB::rollBack();
             return ApiResponseHelper::rollback($ex);
         }
+    }
+
+    public function report()
+    {
+        return Excel::download(new \App\Exports\VehicleExport($this->vehicleRepositoryInterface), "vehiculos.xlsx");
     }
 }
