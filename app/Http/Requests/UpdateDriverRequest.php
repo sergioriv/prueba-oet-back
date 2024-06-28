@@ -25,7 +25,7 @@ class UpdateDriverRequest extends FormRequest
     {
         return [
             'first_name' => 'required|string|max:50',
-            'secodn_name' => 'string|max:50',
+            'second_name' => 'string|max:50',
             'last_names' => 'required|string|max:50',
             'address' => 'required|string|max:50',
             'city' => 'required|string|max:30',

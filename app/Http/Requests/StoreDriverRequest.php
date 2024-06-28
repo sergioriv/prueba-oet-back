@@ -26,7 +26,7 @@ class StoreDriverRequest extends FormRequest
         return [
             'document' => 'required|string|max:10|unique:drivers',
             'first_name' => 'required|string|max:50',
-            'secodn_name' => 'string|max:50',
+            'second_name' => 'string|max:50',
             'last_names' => 'required|string|max:50',
             'address' => 'required|string|max:50',
             'city' => 'required|string|max:30',
