@@ -11,7 +11,7 @@ class VehicleRepository implements VehicleRepositoryInterface
 {
     public function getAll()
     {
-        return Vehicle::all();
+        return Vehicle::with('owner', 'driver')->get();
     }
 
     public function getById($id)
