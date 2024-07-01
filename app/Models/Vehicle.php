@@ -16,7 +16,7 @@ class Vehicle extends Model
         'driver_id',
         'owner_id'
     ];
-    protected $casts = ['is_private' => 'boolean'];
+    protected $casts = ['is_private' => 'int'];
     protected $appends = ['type'];
 
     public function getTypeAttribute() { return $this->is_private ? 'particular' : 'público';  }

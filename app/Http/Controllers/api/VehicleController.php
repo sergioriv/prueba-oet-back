@@ -39,8 +39,8 @@ class VehicleController extends Controller
             'color' => $request->color,
             'make' => $request->make,
             'is_private' => $request->is_private,
-            'driver_id' => $request->driver_id,
-            'owner_id' => $request->owner_id,
+            'driver_id' => $request->driver,
+            'owner_id' => $request->owner,
         ];
 
         DB::beginTransaction();
@@ -60,8 +60,8 @@ class VehicleController extends Controller
             'color' => $request->color,
             'make' => $request->make,
             'is_private' => $request->is_private,
-            'driver_id' => $request->driver_id,
-            'owner_id' => $request->owner_id,
+            'driver_id' => $request->driver,
+            'owner_id' => $request->owner,
         ];
 
         DB::beginTransaction();

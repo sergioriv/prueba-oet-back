@@ -28,8 +28,8 @@ class StoreVehicleRequest extends FormRequest
             'color' => 'required|string|max:20',
             'make' => 'required|string|max:30',
             'is_private' => 'required|boolean',
-            'driver_id' => 'required|exists:drivers,id',
-            'owner_id' => 'required|exists:owners,id',
+            'driver' => 'required|exists:drivers,id',
+            'owner' => 'required|exists:owners,id',
         ];
     }
 
